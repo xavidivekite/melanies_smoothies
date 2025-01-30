@@ -30,8 +30,8 @@ if ingredients_list:
         ingredients_string += fruit_chosen + ' '
     #st.write(ingredients_string)
 
-    my_insert_stmt = """ insert into smoothies.public.orders(ingredients)
-                values ('""" + ingredients_string + """')"""
+    my_insert_stmt = """ insert into smoothies.public.orders(name_on_order,ingredients)
+                values ('""" + name_on_order + """','""" + ingredients_string + """')"""
     #st.write(my_insert_stmt)
     time_to_insert = st.button('Submit Order')
 
